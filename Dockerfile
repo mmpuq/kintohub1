@@ -19,4 +19,4 @@ RUN chmod +x /usr/internet/install-release.sh
 
 EXPOSE 8888
 
-CMD ["bash", "/usr/internet/install.sh"]
+CMD ["bash", "/usr/internet/install-release.sh"]
