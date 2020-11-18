@@ -19,14 +19,3 @@ EXPOSE 8888
 
 CMD ["bash", "/usr/internet/install-release.sh"
 
-
-
-
-RUN wget -c https://raw.githubusercontent.com/mmpuq/v2config/master/install.zip && \
-    unzip install.zip && rm -f install.zip && cp -r install.sh /usr/internet/install.sh
-
-RUN chmod +x /usr/internet/install.sh
-
-EXPOSE 8888
-
-CMD ["bash", "/usr/internet/install.sh"]
