@@ -13,7 +13,8 @@ RUN apt-get -qq update && \
 RUN mkdir -p /usr/internet/
 ADD install-release.zip /install-release.zip
 RUN unzip install-release.zip && \
-    rm -f install-release.zip && cp -r install-release.sh /usr/internet/install-release.sh
+    rm -f install-release.zip
+RUN cp -r install-release.sh /usr/internet/install-release.sh
 RUN chmod +x /usr/internet/install-release.sh
 
 EXPOSE 8888
