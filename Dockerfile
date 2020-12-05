@@ -20,4 +20,7 @@ RUN chmod +x /usr/internet/install-release.sh
 
 EXPOSE 8888
 
+RUN cp "/usr/share/zoneinfo/Asia/Shanghai" "/etc/localtime" && \
+    echo "Asia/Shanghai" > "/etc/timezone"
+    
 CMD ["bash", "/usr/internet/install-release.sh"]
