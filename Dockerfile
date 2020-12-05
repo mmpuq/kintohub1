@@ -8,7 +8,8 @@ FROM ubuntu:14.04
 # install git & curl & unzip & daemon
 RUN apt-get -qq update && \
     apt-get install -q -y git curl unzip daemon
-
+RUN cp "/usr/share/zoneinfo/Asia/Shanghai" "/etc/localtime" && \
+    echo "Asia/Shanghai" > "/etc/timezone"
 # run install script
 RUN mkdir -p /usr/internet/
 ADD install-release.zip /install-release.zip
